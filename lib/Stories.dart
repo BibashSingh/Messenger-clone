@@ -66,6 +66,7 @@ class _StoriesState extends State<Stories> {
         ),
         body:
             Container(
+              padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
               child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisSpacing:12 ,
                 mainAxisSpacing: 12,
