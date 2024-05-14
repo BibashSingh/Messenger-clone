@@ -64,41 +64,40 @@ class _ChatsState extends State<Chats> {
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(
-                child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage("img/maho.jpg"),
-                    ),
-                    const Spacer(),
-                    const Text("Bibash Singh Thakuri"),
-                    const Spacer(),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.settings, color: Colors.black),
-                    )
-                  ],
+            Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+            child: Row(
+              children: [
+                CircleAvatar(
+                  backgroundImage: AssetImage("img/maho.jpg"),
                 ),
-              ),
-            )),
+                const Spacer(),
+                const Text("Bibash Singh Thakuri"),
+                const Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.settings, color: Colors.black),
+                )
+              ],
+            ),
+                          ),
+                        ),
             const ListTile(
-              title: Text("Profile"),
-              leading: Icon(Icons.person),
+              title: Text("Chats"),
+              leading: Icon(Icons.chat_bubble),
             ),
             const ListTile(
-              title: Text("Profile"),
-              leading: Icon(Icons.person),
+              title: Text("Marketplace"),
+              leading: Icon(Icons.home_outlined),
             ),
             const ListTile(
-              title: Text("Profile"),
-              leading: Icon(Icons.person),
+              title: Text("Message requests"),
+              leading: Icon(Icons.message_sharp),
             ),
             const ListTile(
-              title: Text("Profile"),
-              leading: Icon(Icons.person),
+              title: Text("Archive"),
+              leading: Icon(Icons.archive),
             ),
             const ListTile(
               title: Text("Profile"),
@@ -225,7 +224,7 @@ class _ChatsState extends State<Chats> {
                             child: Text(
                               "Home",
                               style:
-                                  TextStyle(fontSize: 12, color: Colors.black),
+                                  TextStyle(fontSize: 12, color: index==0?Colors.black:Colors.grey,fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
@@ -248,7 +247,7 @@ class _ChatsState extends State<Chats> {
                             child: Text(
                               "Channels",
                               style:
-                                  TextStyle(fontSize: 12, color: Colors.black),
+                                  TextStyle(fontSize: 12, color:index==1?Colors.black:Colors.grey,fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),

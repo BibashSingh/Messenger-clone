@@ -57,52 +57,51 @@ class _PeopleState extends State<People> {
             ),
           ],
         ),
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              DrawerHeader(
-                  child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: AssetImage("img/maho.jpg"),
-                      ),
-                      const Spacer(),
-                      const Text("Bibash Singh Thakuri"),
-                      const Spacer(),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.settings, color: Colors.black),
-                      )
-                    ],
-                  ),
+       drawer: Drawer(
+        child: ListView(
+          children: [
+            Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+            child: Row(
+              children: [
+                CircleAvatar(
+                  backgroundImage: AssetImage("img/maho.jpg"),
                 ),
-              )),
-              const ListTile(
-                title: Text("Profile"),
-                leading: Icon(Icons.person),
-              ),
-              const ListTile(
-                title: Text("Profile"),
-                leading: Icon(Icons.person),
-              ),
-              const ListTile(
-                title: Text("Profile"),
-                leading: Icon(Icons.person),
-              ),
-              const ListTile(
-                title: Text("Profile"),
-                leading: Icon(Icons.person),
-              ),
-              const ListTile(
-                title: Text("Profile"),
-                leading: Icon(Icons.person),
-              ),
-            ],
-          ),
+                const Spacer(),
+                const Text("Bibash Singh Thakuri"),
+                const Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.settings, color: Colors.black),
+                )
+              ],
+            ),
+                          ),
+                        ),
+            const ListTile(
+              title: Text("Chats"),
+              leading: Icon(Icons.chat_bubble),
+            ),
+            const ListTile(
+              title: Text("Marketplace"),
+              leading: Icon(Icons.home_outlined),
+            ),
+            const ListTile(
+              title: Text("Message requests"),
+              leading: Icon(Icons.message_sharp),
+            ),
+            const ListTile(
+              title: Text("Archive"),
+              leading: Icon(Icons.archive),
+            ),
+            const ListTile(
+              title: Text("Profile"),
+              leading: Icon(Icons.person),
+            ),
+          ],
         ),
+      ),
       body:ListView.builder(
         itemCount: 10,
         itemBuilder: ((context, index) {
